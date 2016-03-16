@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block jumbotron %}
+{% endblock %}
+
+{% block content %}
+	<h1>My Shifts:</h1>
+	<ul>
+		{% for shift in monday %}
+			<li>{{shift.day}}, {{shift.start_time}}-{{shift.end_time}}
+			<a href="{% url 'schedules:request_cover' shift.id %}">Request someone cover this shift</a></li>
+		{% endfor %}
+		{% for shift in tuesday %}
+			<li>{{shift.day}}, {{shift.start_time}}-{{shift.end_time}}
+			<a href="{% url 'schedules:request_cover' shift.id %}">Request someone cover this shift</a></li>
+		{% endfor %}
+		{% for shift in wednesday %}
+			<li>{{shift.day}}, {{shift.start_time}}-{{shift.end_time}}
+			<a href="{% url 'schedules:request_cover' shift.id %}">Request someone cover this shift</a></li>
+		{% endfor %}
+		{% for shift in thursday %}
+			<li>{{shift.day}}, {{shift.start_time}}-{{shift.end_time}}
+			<a href="{% url 'schedules:request_cover' shift.id %}">Request someone cover this shift</a></li>
+		{% endfor %}
+		{% for shift in friday %}
+			<li>{{shift.day}}, {{shift.start_time}}-{{shift.end_time}}
+			<a href="{% url 'schedules:request_cover' shift.id %}">Request someone cover this shift</a></li>
+		{% endfor %}
+		{% for shift in saturday %}
+			<li>{{shift.day}}, {{shift.start_time}}-{{shift.end_time}}
+			<a href="{% url 'schedules:request_cover' shift.id %}">Request someone cover this shift</a></li>
+		{% endfor %}
+		{% for shift in sunday %}
+			<li>{{shift.day}}, {{shift.start_time}}-{{shift.end_time}}
+			<a href="{% url 'schedules:request_cover' shift.id %}">Request someone cover this shift</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}
